@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+    
+    struct cadastro  {
+    char titulo[300];
+    char autor[300];
+    int anoDePublicacao;
+    float numeroPaginas;
+    };
+ 
+    int main (){
+    struct cadastro Livros[3];
+    int i;
+    
+
+    for (i = 0; i < 3; i++) {
+        printf("Digite o titulo do livro:   ");
+        scanf("%s", Livros[i].titulo);
+
+        printf("Digite o autor do livro:  ");
+        scanf("%s", Livros[i].autor);
+
+        printf("Digite o ano de publicacao do livro:  ");
+        scanf("%d", &Livros[i].anoDePublicacao);
+
+        printf("Digite o numero de paginas do livro:  ");
+        scanf("%f", &Livros[i].numeroPaginas);
+    }
+
+    printf("\nExibindo dados dos livros:\n");
+
+    for (i = 0; i < 3; i++) {
+        printf("Livro %d:\n", i + 1);
+        printf("Titulo: %s\n", Livros[i].titulo);
+        printf("Autor: %s\n", Livros[i].autor);
+        printf("Ano de publicacao: %d\n", Livros[i].anoDePublicacao);
+        printf("Numero paginas: %.2f\n\n", Livros[i].numeroPaginas);
+    }
+
+    return 0;
+}
+
